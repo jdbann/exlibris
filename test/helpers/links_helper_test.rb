@@ -8,6 +8,12 @@ class LinksHelperTest < ActionView::TestCase
       assert_equal "itch.io", link_name(link)
     end
 
+    should "should return DriveThruRPG for drivethrurpg.com links" do
+      link = Link.new(address: "https://drivethrurpg.com/content/")
+
+      assert_equal "DriveThruRPG", link_name(link)
+    end
+
     should "should return Dropbox for dropbox.com links" do
       link = Link.new(address: "https://dropbox.com/content/")
 
@@ -44,6 +50,12 @@ class LinksHelperTest < ActionView::TestCase
       link = links(:eat_prey_kill_itch)
 
       assert_equal :itch, link_icon(link)
+    end
+
+    should "should return :dtrpg for drivethrurpg.com links" do
+      link = Link.new(address: "https://drivethrurpg.com/content/")
+
+      assert_equal :dtrpg, link_icon(link)
     end
 
     should "should return :dropbox for dropbox.com links" do

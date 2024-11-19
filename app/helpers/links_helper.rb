@@ -1,6 +1,7 @@
 module LinksHelper
   LINK_EXPRESSIONS = [
     {name: :match, icon: :itch, regex: /(?<name>itch\.io)/},
+    {name: "DriveThruRPG", icon: :dtrpg, regex: /^(?:https?:\/\/)?(?:www\.)?drivethrurpg.com\/?/},
     {name: "Dropbox", icon: :dropbox, regex: /^(?:https?:\/\/)?(?:www\.)?dropbox.com\/?/},
     {name: "Facebook", icon: :facebook, regex: /^(?:https?:\/\/)?(?:www\.)?facebook.com\/?/},
     {name: "Google", icon: :google, regex: /^(?:https?:\/\/)?(?:www\.)?google.com\/?/},
